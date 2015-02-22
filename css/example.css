@@ -1,5 +1,4 @@
 body {
-       
 }
 
 table {
@@ -15,20 +14,20 @@ td {
     border: 1px solid rgb(145, 132, 112);
     text-align: center;
     padding: 0px;
-    margin:0;
-    background-color:#3C3C3C;
-}
-.table_object {
-    /*border: 1px solid rgb(119, 119, 124);*/   
+    margin: 0;
+    background-color: #3C3C3C;
 }
 
+.table_object {
+    /*border: 1px solid rgb(119, 119, 124);*/;
+}
 
 .table_array {
-    /*border: 1px solid rgb(70, 70, 255); */  
+    /*border: 1px solid rgb(70, 70, 255); */;
 }
 
 #c_object {
-    border: 1px solid red;      
+    border: 1px solid red;
 }
 
 .hidden_object {
@@ -41,73 +40,72 @@ td {
 }
 
 .schema_property {
-	transition: background-color 0.3s;
-	background-color: #282E61;
+    transition: background-color 0.3s;
+    background-color: #282E61;
 }
 
 .schema_property:hover {
-	background-color: #363F85;
+    background-color: #363F85;
 }
 
 .schema_additionalProperty {
-	transition: background-color 0.3s;
-	background-color: #477076;
+    transition: background-color 0.3s;
+    background-color: #477076;
 }
 
 .schema_additionalProperty:hover {
-	background-color: #56888F;
+    background-color: #56888F;
 }
 
 .schema_none {
-	transition: background-color 0.3s;
-	background-color: #960000;
+    transition: background-color 0.3s;
+    background-color: #960000;
 }
 
 .schema_none:hover {
-	background-color: #BD0000;
+    background-color: #BD0000;
 }
 
 .schema_missing {
-	transition: background-color 0.3s;
-	background-color: #BAC99D;
+    transition: background-color 0.3s;
+    background-color: #BAC99D;
 }
 
 .schema_missing:hover {
-	background-color: #E1F3BD;
+    background-color: #E1F3BD;
 }
 
 .header {
-	transition: background-color, 0.3s;
-	background-color:  black;
-	color: white;
-	text-align: center;
-	padding: 5px;
+    transition: background-color, 0.3s;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
 
 .add_to_array {
-	transition: background-color 0.3s;
-	background-color:  black;
-	color: white;
-	text-align: center;
-	padding: 5px;
+    transition: background-color 0.3s;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
 
 .add_to_array:hover,.add_to_object:hover, .header:hover {
-	background-color: #292929;
+    background-color: #292929;
 }
 
 .add_to_object {
-	transition: background-color 0.3s;
-	background-color:  black;
-	color: white;
-	text-align: center;
-	border-radius: 25px;    
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-	font-weight: bold;
+    transition: background-color 0.3s;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: bold;
 }
- 
 
 #show_object {
     display: none;
@@ -122,42 +120,42 @@ td {
 
 input:disabled,select:disabled {
     border: 0px;
-    text-align: center;        
+    text-align: center;
     background-color: #3C3C3C;
-    color:white;
+    color: white;
     width: 100%;
-	 margin-top: 0px;
+    margin-top: 0px;
 }
 
 input, select {
-	transition: background-color 0.3s, color 0.3s, border 0.3s;
-	font-size: inherit;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	background-color: #545454;
-	color:white;
-	text-align: center;
-	display: block;
-	width: 100%;
-	height: 38px;
-	font-weight: 500;
-	border: 0;
-	border-bottom: 3px solid #8C8C8C;
-	#border-top: 3px solid #8C8C8C;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    font-size: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #545454;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 38px;
+    font-weight: 500;
+    border: 0;
+    border-bottom: 3px solid #8C8C8C;
+    #border-top: 3px solid #8C8C8C;
 }
 
 input:focus, select:focus {
-	border-color: #1e9ce6;
-	outline: 0;
-	background-color: white;
-	color:black;
+    border-color: #1e9ce6;
+    outline: 0;
+    background-color: white;
+    color: black;
 }
 
 input:focus:hover, select:focus:hover {
-	background-color: #CCCCCC;
+    background-color: #CCCCCC;
 }
 
 input:hover, select:hover {
-	background-color: #686868;
+    background-color: #686868;
 }
