@@ -41,29 +41,29 @@ td {
 
 .schema_property {
     transition: background-color 0.3s;
-    background-color: #282E61;
+    background-color: #38374b;
 }
 
 .schema_property:hover {
-    background-color: #363F85;
+    background-color: #454282;
 }
 
 .schema_additionalProperty {
     transition: background-color 0.3s;
-    background-color: #477076;
+    background-color: #364e4e;
 }
 
 .schema_additionalProperty:hover {
-    background-color: #56888F;
+    background-color: #3B6E6E;
 }
 
 .schema_none {
     transition: background-color 0.3s;
-    background-color: #960000;
+    background-color: #623030;
 }
 
 .schema_none:hover {
-    background-color: #BD0000;
+    background-color: #8C3434;
 }
 
 .schema_missing {
@@ -152,10 +152,10 @@ input:focus, select:focus {
     color: black;
 }
 
-input:focus:hover, select:focus:hover {
+input:focus:hover {
     background-color: #CCCCCC;
 }
 
-input:hover, select:hover {
+input:hover, select:not(:focus):hover {
     background-color: #686868;
 }
