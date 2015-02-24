@@ -365,6 +365,43 @@ function buildError(parent, item) {
     return {toggle: function () {}};
 }
 
+
+function empty_obj(schema) {
+    var schema_type = undefined;
+    var obj;
+    if (schema && schema.hasOwnProperty('type'))  schema_type = schema.type;
+    if (schema && schema.hasOwnProperty('enum'))  schema_type = 'enum';
+    switch (schema_type) {
+        case 'string':
+            obj = '';
+            break;
+        case 'integer':
+            obj = 0;
+            break;
+        case 'number':
+            obj = 0.0;
+            break;
+        case 'enum':
+            obj = schema.enum[0];
+            break;
+        case 'array':
+            obj = [];
+            obj.push(empty_obj(schema.items));
+            break;
+        case 'object':
+            obj = {};
+            for (var key in schema.properties) {
+                obj[key] =  empty_obj(schema.properties[key]);
+            }
+            if (schema.hasOwnProperty('additionalProperties')) {
+                obj[''] =  empty_obj(schema.additionalProperties);
+            }
+            break;
+    }
+    return obj;
+}
+
+
 function build(key_parent, key, item_parent, item, schema, prev_options) {
     
     var schema_type = undefined;
@@ -458,37 +495,3 @@ function build(key_parent, key, item_parent, item, schema, prev_options) {
 
 
 
-function empty_obj(schema) {
-    var schema_type = undefined;
-    var obj;
-    if (schema && schema.hasOwnProperty('type'))  schema_type = schema.type;
-    if (schema && schema.hasOwnProperty('enum'))  schema_type = 'enum';
-    switch (schema_type) {
-        case 'string':
-            obj = '';
-            break;
-        case 'integer':
-            obj = 0;
-            break;
-        case 'number':
-            obj = 0.0;
-            break;
-        case 'enum':
-            obj = schema.enum[0];
-            break;
-        case 'array':
-            obj = [];
-            obj.push(empty_obj(schema.items));
-            break;
-        case 'object':
-            obj = {};
-            for (var key in schema.properties) {
-                obj[key] =  empty_obj(schema.properties[key]);
-            }
-            if (schema.hasOwnProperty('additionalProperties')) {
-                obj[''] =  empty_obj(schema.additionalProperties);
-            }
-            break;
-    }
-    return obj;
-}

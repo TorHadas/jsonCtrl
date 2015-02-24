@@ -107,3 +107,7 @@ input:disabled {
     font-size: 16px;
 }
 
+.search_data_btn{
+    display:inline-block;   
+}
+
