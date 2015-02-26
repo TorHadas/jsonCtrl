@@ -142,10 +142,7 @@ input:disabled {
 }
  
 span.select_key_name {
-    width:100px;
     display:inline-block;
-    border: 1px black solid;
-    background-color: lightblue;
 }
 
 span.select_key_name[data-selected="1"] {
@@ -162,4 +159,7 @@ span.select_key_name[data-selected="1"] {
 
 .select_key_div {
     margin-left: 10px;   
+    width:100px;
+    border: 1px black solid;
+    background-color: lightblue;
 }
