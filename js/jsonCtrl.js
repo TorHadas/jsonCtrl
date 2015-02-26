@@ -421,7 +421,7 @@ function build(key_parent, key, item_parent, item, schema, prev_options) {
         }
         if (prev_options.hasOwnProperty('depth')) {  
             options.depth = 1 + prev_options.depth;
-            if (options.depth > 30) return toggle;
+            if (options.depth > 30) return ret_child;
         }
         if (prev_options.hasOwnProperty('parent')) {
             if (key && prev_options.parent == 'object') {
@@ -490,6 +490,10 @@ function build(key_parent, key, item_parent, item, schema, prev_options) {
     if (options.hasOwnProperty('show') && ret_child.val) { 
         key_parent.dblclick(function () {options.show(ret_child.val);});
     }
+    ret_child.show_key = function (str) { if (str == key) ret_child.toggle(-2); }
+    ret_child.hide_key = function (str) { if (str == key) ret_child.toggle(-1); }
+    ret_child.edit_key = function (str) { if (str == key) ret_child.toggle(-3); }
+    
     return ret_child;
 }
 

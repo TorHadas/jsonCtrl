@@ -66,8 +66,12 @@ function search_callback(where) {
     alert("searching for: "+JSON.stringify(where))
 }
 
+
+
+
 var search = search($('#search'), jschema, search_callback);
 var child = build($('#data_title'), 'My Data',  $('#data'), jdata, jschema,{edit:true, show:show_object});
+var keys = keys($('#search'), jschema, $('#data'))
 child.toggle();
 
 function show_object(valfunc) {

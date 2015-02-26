@@ -107,7 +107,59 @@ input:disabled {
     font-size: 16px;
 }
 
-.search_data_btn{
-    display:inline-block;   
+    
+.search_area {
+    background-color: brown;
+    text-align: center;
+   border: 1px white solid;
+ }
+
+.search_title {
+    margin: 5px; 
+    color:white;
 }
 
+
+
+.search_btn {
+    display:inline-block;   
+    border: 1px black solid;
+    background-color: lightgreen;
+    width: 60px;
+    margin: 10px;
+    text-align: center;
+}
+
+.search_input {
+    background-color: lightgreen;
+    width: 100px;
+    margin: 10px;
+}
+.search_key {
+    background-color: lightgreen;    
+    width: 200px;
+    margin: 10px;
+}
+ 
+span.select_key_name {
+    width:100px;
+    display:inline-block;
+    border: 1px black solid;
+    background-color: lightblue;
+}
+
+span.select_key_name[data-selected="1"] {
+    background-color: beige;
+}
+
+.select_key_cbox {
+    height:15px;
+    display:inline-block;
+    border: 1px black solid;
+    background-color: lightblue;    
+     width: 15px;
+}
+
+.select_key_div {
+    margin-left: 10px;   
+}
