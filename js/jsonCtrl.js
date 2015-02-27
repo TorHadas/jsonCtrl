@@ -490,12 +490,46 @@ function build(key_parent, key, item_parent, item, schema, prev_options) {
     if (options.hasOwnProperty('show') && ret_child.val) { 
         key_parent.dblclick(function () {options.show(ret_child.val);});
     }
-    ret_child.show_key = function (str) { if (str == key) ret_child.toggle(-2); }
-    ret_child.hide_key = function (str) { if (str == key) ret_child.toggle(-1); }
-    ret_child.edit_key = function (str) { if (str == key) ret_child.toggle(-3); }
-    
+    //keyStore.register(key, key_parent);
     return ret_child;
 }
 
-
+var keyStore {
+    register: function(key, dom_obj, hide, show, edit, val) {
+        if (!store.hasOwnProperty(key)) {
+            store[key] = [];
+        }
+        store[key].push({dom_obj:dom_obj, hide:hide, show:show, edit:edit, val:val, children:[]});
+        var key_splits = key.split('.');
+        if (key_splits.length()<2) return;
+        key = key_splits.slice(0,key_splits.length-1).join('.');
+        store[key].children.push(key_splits[key_splits.length-1]);
+    },
+    show: function(key) {
+        function _show(element) {
+            element.show();
+        }
+        key_action(_show);    
+    },
+    edit: function(key) {
+        function _edit(element) {
+            element.edit();
+        }
+        key_action(_edit);    
+    },
+    hide: function(key) {
+        function _hide(element) {
+            element.hide();
+        }
+        key_action(_hide);    
+    },
+    key_action: function(key, callback) { 
+        if (!store.hasOwnProperty(key)) return;
+        var elements = store[key];
+        for (var i; i<elements.length; i++) {
+            callback(elements[i]);   
+        }    
+    }
+    
+}
 

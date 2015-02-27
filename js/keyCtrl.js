@@ -73,8 +73,7 @@ function control_keys(parent, schema, data) {
             select_key_edit.attr('id', 'edit_key.'+newkey);
             select_key_edit.hide();
             select_key_edit.change(key_change);
-            select_key_name.append(select_key_edit)
-            select_key_div.append(select_key_name)
+            select_key_div.append(select_key_name, select_key_edit)
             parent.append(select_key_div);
             browse(select_key_div, obj[key], newkey);
         }
