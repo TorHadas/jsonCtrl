@@ -1,5 +1,4 @@
 body {
-       
 }
 
 table {
@@ -15,37 +14,66 @@ td {
     border: 1px solid rgb(145, 132, 112);
     text-align: center;
     padding: 0px;
-    margin:0;
+    margin: 0;
+    background-color: #3C3C3C;
 }
 
-input {
-    background-color: beige;
-    width: 80px;
-}
-
-
-input:disabled {
+input:disabled,select:disabled {
     border: 0px;
-    text-align: center;        
+    text-align: center;
+    background-color: #3C3C3C;
+    color: white;
+    width: 100%;
+    margin-top: 0px;
+}
+
+input, select {
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    font-size: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #545454;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 38px;
+    font-weight: 500;
+    border: 0;
+    border-bottom: 3px solid #8C8C8C;
+    #border-top: 3px solid #8C8C8C;
+}
+
+input:focus, select:focus {
+    border-color: #1e9ce6;
+    outline: 0;
     background-color: white;
-    width: 80px;
+    color: black;
+}
+
+input:focus:hover {
+    background-color: #CCCCCC;
+}
+
+input:hover, select:not(:focus):hover {
+    background-color: #686868;
 }
 
 .table_object {
-    /*border: 1px solid rgb(119, 119, 124);*/   
+    /*border: 1px solid rgb(119, 119, 124);*/;
 }
 
-
 .table_array {
-    /*border: 1px solid rgb(70, 70, 255); */  
+    /*border: 1px solid rgb(70, 70, 255); */;
 }
 
 #c_object {
-    border: 1px solid red;      
+    border: 1px solid red;
 }
 
 .hidden_object {
-    color: gray;
+    color: grey;
 }
 
 .key {
@@ -54,47 +82,72 @@ input:disabled {
 }
 
 .schema_property {
-    background-color: rgb(204, 175, 130);
+    transition: background-color 0.3s;
+    background-color: #38374b;
+}
+
+.schema_property:hover {
+    background-color: #454282;
 }
 
 .schema_additionalProperty {
-    background-color: #b2b2fc;
+    transition: background-color 0.3s;
+    background-color: #364e4e;
+}
+
+.schema_additionalProperty:hover {
+    background-color: #3B6E6E;
 }
 
 .schema_none {
-    background-color: rgb(206, 138, 138);
+    transition: background-color 0.3s;
+    background-color: #623030;
+}
+
+.schema_none:hover {
+    background-color: #8C3434;
 }
 
 .schema_missing {
-    background-color: #bac99d;
+    transition: background-color 0.3s;
+    background-color: #BAC99D;
 }
 
+.schema_missing:hover {
+    background-color: #E1F3BD;
+}
 
 .header {
-    background-color:  black;
+    transition: background-color, 0.3s;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 5px;
 }
 
 .add_to_array {
-    background-color:  black;
+    transition: background-color 0.3s;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 5px;
 }
 
+.add_to_array:hover,.add_to_object:hover, .header:hover {
+    background-color: #292929;
+}
+
 .add_to_object {
-    background-color:  black;
+    transition: background-color 0.3s;
+    background-color: black;
     color: white;
     text-align: center;
-    border-radius: 25px;    
+    border-radius: 25px;
     width: 14px;
     height: 14px;
     font-size: 12px;
     font-weight: bold;
 }
- 
 
 #show_object {
     display: none;
@@ -107,7 +160,6 @@ input:disabled {
     font-size: 16px;
 }
 
-    
 .search_area {
     background-color: brown;
     text-align: center;
